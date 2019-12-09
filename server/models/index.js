@@ -1,10 +1,12 @@
 const sequelize = require("sequelize");
 
-const db = new sequelize("pertani", "helmproyek2000", "12345678", {
-  host: "localhost",
+console.log("Hello World")
+
+const db = new sequelize("pertani", "root", "12345678", {
+  host: "db",
   dialect: "mysql",
   logging: false
-});
+})
 
 db.authenticate()
   .then(() => {
@@ -42,8 +44,8 @@ TransactionHistory.belongsTo(Staff);
 Client.belongsTo(User);
 Staff.belongsTo(User);
 
-User.hasOne(Client)
-User.hasOne(Staff)
+User.hasOne(Client);
+User.hasOne(Staff);
 
 // db.sync({force:true});
 
