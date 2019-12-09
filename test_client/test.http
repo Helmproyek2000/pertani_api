@@ -1,0 +1,53 @@
+POST http://localhost:3000/transaction/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiaWF0IjoxNTc1MDAyODg0LCJleHAiOjE1NzYyMTI0ODR9.hPbKSKa3L6El2uvQUSGqOO_8LieUi1OvdIBq_WWj9xKeqbWv7nogHVRGpAlQHkAFlyt6tWkWkGONtKAdvonPtH4oKW9RG4EIarAHwMMvFh9kr0F0fQ5yk6Z3S9osUQs7OCHvjYQirAD9rXMp1K-5iWu9vRzsTln7_o6cslmP2ew
+
+{
+    "cod":false
+}
+
+######
+
+POST http://localhost:3000/transaction/2/update_status
+
+####
+
+GET http://localhost:3000/transaction/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1IiwiaWF0IjoxNTc1MDAzOTQ3LCJleHAiOjE1NzYyMTM1NDd9.dZ3euFf6EI-E9PeXDLruUC3HauEk9TCwCRpJqpEaXEkVV_Dh4ZmSbkDdgzJiR1TfT5t95CT_YFnh81dxmdtMwraW-OVHrzh4gjBV7J_ZnHvRSM8Na9icwxj2xcN9BxUAauGmaqN3WqJQ7uv4HLoRnPoobGnIaQ8SQJ_xbBoPLaI
+
+####
+GET http://localhost:3000/cart HTTP/1.1
+
+####
+POST  http://localhost:3000/cart HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiaWF0IjoxNTc1ODAzNTI2LCJleHAiOjE1NzcwMTMxMjZ9.r6Q7S7Gb7s8CaNnmYdFLUfbev_v5USPQjCXR0hyvaokOEu_2vVNq_uTCoVKruo1KqkQ9D882B6qds6tsH27FFalCyrWQ2hgT5GaE0wDWQSDv8eeg3uTP99YgttPEmYvG7Yqp0RDPUzB6R9-_z99db-ehizLRv75Y9lQuEn-JbBU
+
+{"productId":5,"amount":30}
+
+###
+
+DELETE  http://localhost:3000/cart HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1IiwiaWF0IjoxNTc1NTQ0MTA5LCJleHAiOjE1NzY3NTM3MDl9.j07hw3IxPjia0AfWEldFftG7jiZjAy6dqXLu5DdDrof737kRljTgaHEJOe5Dvtmyv98wTNmH7F1oX17_vmddUTkdrgoT32ZYwVa4VOaJKLFJWKyoCHwdYqy_OyvuCV6EYtc4ITT0SSAvhWq12AxIbw62zgGZu1vAbCbHsHgAQbY
+
+###
+POST http://localhost:3000/auth/login/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId":"2"
+}
+
+###
+
+GET http://localhost:3000/auth/me/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1IiwiaWF0IjoxNTc1ODAxODAzLCJleHAiOjE1NzcwMTE0MDN9.1ciDgNbD0zWwlTcAE4VVrbPsaE-YSqgeeeRiG7eRJqpSlUJhvjhgz0X3BNnEtyKGxnkg5Z-3u--m4n92y62nfoxooNlJv4LRnYPz9FoKf5pQeu78HKa9gJ0MiFiA1_Z330YBncJezkgDC7uzRoQ6pUkf_iOVztPx4yIlRqVPV8A
+###
+
+GET http://localhost:3000/product?category&q=2
+Authorization: Bearer eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1IiwiaWF0IjoxNTc1NTQ0MTA5LCJleHAiOjE1NzY3NTM3MDl9.j07hw3IxPjia0AfWEldFftG7jiZjAy6dqXLu5DdDrof737kRljTgaHEJOe5Dvtmyv98wTNmH7F1oX17_vmddUTkdrgoT32ZYwVa4VOaJKLFJWKyoCHwdYqy_OyvuCV6EYtc4ITT0SSAvhWq12AxIbw62zgGZu1vAbCbHsHgAQbY
+
+###
+
+GET http://localhost:3000/user/1
+Authorization: Bearer eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiaWF0IjoxNTc1ODAzNTI2LCJleHAiOjE1NzcwMTMxMjZ9.r6Q7S7Gb7s8CaNnmYdFLUfbev_v5USPQjCXR0hyvaokOEu_2vVNq_uTCoVKruo1KqkQ9D882B6qds6tsH27FFalCyrWQ2hgT5GaE0wDWQSDv8eeg3uTP99YgttPEmYvG7Yqp0RDPUzB6R9-_z99db-ehizLRv75Y9lQuEn-JbBU
