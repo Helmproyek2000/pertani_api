@@ -1,3 +1,3 @@
 # Pertani API
 
-Api untuk aplikasi Pertani Aplikasi
+Api untuk aplikasi Pertani App.
